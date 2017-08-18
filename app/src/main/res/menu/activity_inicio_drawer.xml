@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_simu"
+        android:title="Simulados" />
+
+    <item
+        android:id="@+id/nav_esta"
+        android:title="Estatísticas"/>
+
+    <item
+        android:id="@+id/nav_lembre"
+        android:title="Lembrete"/>
+</menu>

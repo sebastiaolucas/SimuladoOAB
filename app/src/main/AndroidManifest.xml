@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="marquesapp.com.br.simuladooab">
+
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+
+        <activity
+            android:name=".activitys.InicioActivity"
+            android:label="Simulados"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|adjustPan"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activitys.ProvasActivity" />
+        <activity android:name=".activitys.SimuladoPersonActivity" />
+        <activity android:name=".activitys.QuestaoActivity" />
+        <activity android:name=".activitys.ResultadoActivity" />
+        <activity android:name=".activitys.EstatisticasActivity"
+            android:screenOrientation="portrait"/>
+
+        <receiver android:name=".receiver.BootLembreteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".receiver.LembreteReceiver">
+            <intent-filter>
+                <action android:name="LEMBRETE"/>
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

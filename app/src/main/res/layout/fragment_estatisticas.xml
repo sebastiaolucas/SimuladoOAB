@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal|center_vertical">
+
+    <TextView
+        android:id="@+id/text_total"
+        android:text="Total de questões:"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/numero_total"
+        android:text="100"
+        android:textColor="#2AFF00"
+        android:textSize="25sp"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/text_acertos"
+        android:text="Acertos:"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/numero_acertos"
+        android:text="60 (60%)"
+        android:textColor="#2AFF00"
+        android:textSize="25sp"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/text_erros"
+        android:text="Erros:"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/numero_erros"
+        android:text="40 (40%)"
+        android:textColor="#ff0004"
+        android:textSize="25sp"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

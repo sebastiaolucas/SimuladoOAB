@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal|center_vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Escolha uma opção:"
+            android:textSize="25sp"
+            android:textColor="#000"/>
+
+        <Button
+            android:id="@+id/btn_provas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resolver Prova"
+            android:background="#FF1616"
+            android:textColor="#FFFFFF"
+            android:layout_margin="15dp"
+            android:elevation="5dp"
+            android:shadowColor="#bababa"/>
+
+        <Button
+            android:id="@+id/btn_simulados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Criar simulado"
+            android:background="#FF1616"
+            android:textColor="#FFFFFF"
+            android:layout_margin="15dp"
+            android:elevation="5dp"
+            android:shadowColor="#bababa"/>
+
+        <Button
+            android:id="@+id/btn_aleatorio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Questão aleatória"
+            android:background="#FF1616"
+            android:textColor="#FFFFFF"
+            android:layout_margin="15dp"
+            android:elevation="5dp"
+            android:shadowColor="#bababa"/>
+</LinearLayout>
