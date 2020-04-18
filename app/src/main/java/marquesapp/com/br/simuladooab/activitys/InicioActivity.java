@@ -3,17 +3,15 @@ package marquesapp.com.br.simuladooab.activitys;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
-import android.support.design.widget.NavigationView;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentTransaction;
+
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,9 +21,7 @@ import android.widget.CompoundButton;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import com.facebook.FacebookSdk;
-import com.facebook.appevents.AppEventsConstants;
-import com.facebook.appevents.AppEventsLogger;
+import com.google.android.material.navigation.NavigationView;
 
 import java.io.Serializable;
 
@@ -45,9 +41,6 @@ public class InicioActivity extends AppCompatActivity implements NavigationView.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.inicio_layout);
-
-        FacebookSdk.sdkInitialize(getApplicationContext());
-        AppEventsLogger.activateApp(this);
     }
 
     @Override
@@ -84,7 +77,6 @@ public class InicioActivity extends AppCompatActivity implements NavigationView.
 
     protected void onPause() {
         super.onPause();
-        AppEventsLogger.deactivateApp(this);
     }
 
     @Override
@@ -93,7 +85,6 @@ public class InicioActivity extends AppCompatActivity implements NavigationView.
         return super.onCreateOptionsMenu(menu);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
 
@@ -122,7 +113,6 @@ public class InicioActivity extends AppCompatActivity implements NavigationView.
         b.setView(view);
         b.setTitle("Horário do lembrete:");
         b.setPositiveButton("Salvar", new DialogInterface.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 CheckBox box = (CheckBox) view.findViewById(R.id.check_lembre);

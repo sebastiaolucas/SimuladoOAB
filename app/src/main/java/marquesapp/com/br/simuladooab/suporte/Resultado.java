@@ -1,7 +1,7 @@
 package marquesapp.com.br.simuladooab.suporte;
 
 import android.content.Context;
-import android.support.v7.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog;
 
 import java.io.Serializable;
 

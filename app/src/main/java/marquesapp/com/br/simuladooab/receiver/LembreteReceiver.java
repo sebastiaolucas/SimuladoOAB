@@ -1,7 +1,6 @@
 package marquesapp.com.br.simuladooab.receiver;
 
 import android.app.AlarmManager;
-import android.app.Notification;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -9,21 +8,16 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationManagerCompat;
-import android.widget.RemoteViews;
+
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import marquesapp.com.br.simuladooab.R;
-import marquesapp.com.br.simuladooab.activitys.EstatisticasActivity;
 import marquesapp.com.br.simuladooab.activitys.InicioActivity;
 import marquesapp.com.br.simuladooab.dao.LembreteDAO;
 import marquesapp.com.br.simuladooab.dao.ResolvidasDAO;
 
 public class LembreteReceiver extends BroadcastReceiver {
-
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public void onReceive(Context context, Intent intent) {
         AlarmManager alarm = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
