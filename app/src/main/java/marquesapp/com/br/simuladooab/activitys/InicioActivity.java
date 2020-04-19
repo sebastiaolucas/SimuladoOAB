@@ -3,9 +3,13 @@ package marquesapp.com.br.simuladooab.activitys;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Build;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -113,6 +117,7 @@ public class InicioActivity extends AppCompatActivity implements NavigationView.
         b.setView(view);
         b.setTitle("Horário do lembrete:");
         b.setPositiveButton("Salvar", new DialogInterface.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 CheckBox box = (CheckBox) view.findViewById(R.id.check_lembre);

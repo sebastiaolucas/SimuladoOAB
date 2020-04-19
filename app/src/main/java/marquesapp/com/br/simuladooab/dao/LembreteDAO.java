@@ -8,6 +8,9 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -60,6 +63,7 @@ public class LembreteDAO extends SQLiteOpenHelper {
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public void setLembrete(Lembrete lembrete){
         getWritableDatabase().delete(TABELA,null,null);
         if(lembrete.isLembrete()){
@@ -75,6 +79,7 @@ public class LembreteDAO extends SQLiteOpenHelper {
         return cv;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public void criarAlarme(Lembrete lembrete){
         AlarmManager alarm = (AlarmManager) ctx.getSystemService(Context.ALARM_SERVICE);
         alarm.cancel(getPending(ctx));
